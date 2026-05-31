@@ -48,6 +48,31 @@ The visible web configuration confirms that `PPP HAS/B2b` exists as a correction
 
 Use USB diagnostics to look for receiver messages that identify the active correction source and PPP/HAS convergence state. Until that diagnostic evidence is captured, the guide should describe HAS as "not yet verified on this unit."
 
+## First USB Diagnostic Result
+
+The first USB diagnostic pass used `COM3`, the u-blox USB serial device, at 115200 baud.
+
+Observed NMEA:
+
+- `GGA` fix quality: `2`, DGPS
+- `RMC` mode: `D`, differential
+- Differential age field: blank
+
+Observed UBX:
+
+- `NAV-PVT` fix type: 3D fix
+- `NAV-PVT` `diffSoln`: true
+- `NAV-PVT` carrier solution: none
+- `NAV-STATUS` `diffSoln`: true
+- `NAV-STATUS` carrier solution: none
+- `NAV-SIG` correction source counts: 88 no corrections, 12 SBAS corrections
+- `NAV-SIG` Galileo HAS correction records: none observed
+- `RXM-COR`: no response to poll
+
+The u-blox interface description identifies `NAV-SIG` correction source `12` as Galileo HAS. No `corrSource=12` signal records were observed in this first diagnostic capture. This supports the current working conclusion that the observed `DGPS` state is not proven to be HAS and, in this capture, appears to include SBAS corrections.
+
+This was not a final HAS denial test. A proper HAS test still needs open sky view, time for HAS convergence, and a repeated USB diagnostic capture.
+
 ## Open Questions
 
 - How does the FPX-T display HAS status in the web interface?

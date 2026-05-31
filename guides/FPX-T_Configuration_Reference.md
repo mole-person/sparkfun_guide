@@ -16,6 +16,9 @@ Web configuration pass status:
 - Later observed SW Maps accuracy improved to horizontal 17 cm and vertical 34 cm.
 - Three repeated zero-height SW Maps elevations after stabilization: 74.793 m, 74.798 m, 74.417 m.
 - After stabilization, SW Maps still reported fix type DGPS and age of differential n/a.
+- First USB diagnostics identified `COM3` as the u-blox GNSS serial port and confirmed NMEA/UBX output.
+- First USB diagnostics showed DGPS / differential GNSS flags with no carrier solution and no observed Galileo HAS correction records.
+- `NAV-SIG` correction source counts during first USB diagnostics: 88 no corrections, 12 SBAS corrections, 0 Galileo HAS corrections.
 
 ## GNSS Configuration
 
