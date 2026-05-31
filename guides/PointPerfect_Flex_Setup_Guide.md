@@ -10,6 +10,9 @@ Sources: [SparkFun RTK Everywhere PointPerfect Flex](../docs/sparkfun-rtk-everyw
 - The FPX-T documentation says PointPerfect-style corrections are provided over an IP connection, usually using a cell phone hotspot.
 - The FPX-T documentation says time to RTK fix can take up to 300 seconds.
 - The FPX-T documentation lists expected horizontal accuracy as about 14 to 60 mm.
+- The FPX-T web interface includes a PointPerfect Configuration section.
+- During first setup, the PointPerfect Service setting was `Disabled`.
+- During first setup, the PointPerfect Device ID was visible as `28562FACA3B606`.
 
 ## Setup Workflow Draft
 
